@@ -7,7 +7,7 @@ Team Project week five w/ Jasmin, David, Stefan.
 - [Checklist](#checklist)
 - [Challenges](#challenges)
 - [Resources](#resources)
-- [Getting Started with Create React App](#Getting Started with Create React App)
+- [Getting Started with Create React App](#Getting-Started-with-Create-React-App)
 
 # Prerequisites
 - HTML 5
