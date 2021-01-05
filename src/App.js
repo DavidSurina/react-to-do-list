@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./app.css";
+import InputForm from "./Components/InputForm/InputForm";
 
 // components
 import TodoList from "./Components/TodoList/TodoList";
@@ -7,30 +8,28 @@ import TodoList from "./Components/TodoList/TodoList";
 export default function App() {
   let [input, setInput] = useState("");
   const [todoList, setTodoList] = useState([]);
+  let [id, setID] = useState(0);
 
   const onSubmit = () => {
+    setID(++id);
     const newTodo = {
-      id: todoList.length + 1,
+      id: id,
       task: input,
       isDone: false,
     };
-    if (todoList.length === 0) {
-      setTodoList(todoList.concat(newTodo));
-    } else {
-      setTodoList([...todoList, newTodo]);
-    }
+    console.log(todoList);
+    setTodoList([...todoList, newTodo]);
     setInput("");
+    console.log(todoList);
   };
 
   return (
     <div className="App">
-      <div className="InputForm">
-        <input
-          value={input}
-          onInput={(event) => setInput(event.target.value)}
-        />
-        <button onClick={onSubmit}>Submit</button>
-      </div>
+      <InputForm
+        onSubmit={onSubmit}
+        input={input}
+        setInput={(input) => setInput(input)}
+      />
       <TodoList todoList={todoList} />
     </div>
   );
