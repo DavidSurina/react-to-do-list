@@ -1,0 +1,11 @@
+.done {
+  background: green;
+}
+
+.undone {
+  background-color: red;
+}
+
+.todoCard {
+  overflow: hidden;
+}
