@@ -2,10 +2,13 @@
 import "./todo.css";
 
 export default function Todo({ todo, todoList, setTodoList }) {
+
   const markAsDone = () => {
     const todoUpdatedArray = todoList.map((todoObject) => {
       if (todoObject.id === todo.id) {
-        todoObject.isDone = true;
+        //todoObject.isDone = true;
+        todoObject.isDone === true ? todoObject.isDone = false : todoObject.isDone = true;
+        //console.log(todoObject);
         return todoObject;
       } else {
         return todoObject;
@@ -13,6 +16,17 @@ export default function Todo({ todo, todoList, setTodoList }) {
     });
     setTodoList(todoUpdatedArray);
   };
+
+  
+  const deleteTask = () => {
+    todoList.map((todoObject) => {
+      if(todoObject.id === todo.id) {
+        todoList.splice(todoObject, 1);
+      }
+      console.log(todoList);
+    });
+    setTodoList([...todoList]);
+  }
 
   return (
     <div className="task">
@@ -27,9 +41,10 @@ export default function Todo({ todo, todoList, setTodoList }) {
       </p>
       <button
         onClick={markAsDone}
-        className="task-button fas fa-check"
+        className={"task-button fas fa-check"}
+        className={todo.isDone === false ? "task-button fas fa-check" : "task-button fas fa-undo"}
       ></button>
-      <button className="task-button far fa-trash-alt"></button>
+      <button onClick={deleteTask} className="task-button far fa-trash-alt"></button>
     </div>
   );
 }
