@@ -12,7 +12,7 @@ export default function App() {
   let [input, setInput] = useState("");
   let [id, setID] = useState(0);
 
-  const onSubmit = () => {
+  const addTodo = () => {
     setID(++id);
 
     const newTodo = {
@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className="App">
       <InputForm
-        onSubmit={onSubmit}
+        addTodo={addTodo}
         input={input}
         setInput={(input) => setInput(input)}
       />
