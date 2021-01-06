@@ -1,7 +1,12 @@
+// Import css files
+import "./todo.css";
+
 export default function Todo({ todo }) {
   return (
     <div className="todocard">
-      <div className={todo.isDone ? "done" : "undone"}>{todo.task}</div>
+      <div>
+        <p>{todo.task}</p>
+      </div>
     </div>
   );
 }
