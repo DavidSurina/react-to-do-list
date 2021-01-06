@@ -21,12 +21,18 @@ Create a TO do List with React:
 
 
 # CheckList 
-- [ ] Create Repo on Git Hub 
-- [ ] Clean React Folders
-- [ ] Create Arquitechture for the project 
+- [x] Create Repo on Git Hub 
+- [x] Clean React Folders
+- [x] Create Arquitechture for the project 
+- [x] Create HTML & CSS 
+- [x] Implemnet HTML & CSS to React 
+
 
 
 # Challenges
+- Define workflow in the team 
+- find the correct structure to implement all elements
+
 
 
 # Resources
