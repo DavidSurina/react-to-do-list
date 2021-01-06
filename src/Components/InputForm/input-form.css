@@ -1,0 +1,43 @@
+.task-form {
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#input-field {
+  height: 5rem;
+  width: 80%;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  padding-left: 1rem;
+  background-color: #1f232a;
+  color: #60dafb;
+  border: 1px solid #60dafb;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+::placeholder {
+  color: #60dafb;
+  opacity: 0.3;
+}
+
+.submit-button {
+  height: 5rem;
+  width: 10%;
+  font-size: 2.5rem;
+  color: #60dafb;
+  background-color: #1f232a;
+  border: 0.2px solid #60dafb;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  transition: all 0.2s;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.submit-button:hover {
+  color: #1f232a;
+  background-color: #60dafb;
+}
