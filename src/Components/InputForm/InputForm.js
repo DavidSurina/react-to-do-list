@@ -1,3 +1,6 @@
+// Import css files
+import "./input-form.css";
+
 export default function InputForm({ input, setInput, onSubmit }) {
   return (
     <div className="InputForm">
