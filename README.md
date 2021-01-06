@@ -1,3 +1,39 @@
+# React To Do List  
+Team Project week five w/ Jasmin, David, Stefan. 
+
+# Table of Contents
+- [Prerequisites](#Prerequisites)
+- [Overview](#project-overview)
+- [Checklist](#checklist)
+- [Challenges](#challenges)
+- [Resources](#resources)
+- [Getting Started with Create React App](#Getting-Started-with-Create-React-App)
+
+# Prerequisites
+- HTML 5
+- CSS 3
+- Github
+- JSX
+- REACT
+
+# Objective
+Create a TO do List with React: 
+
+
+# CheckList 
+- [ ] Create Repo on Git Hub 
+- [ ] Clean React Folders
+- [ ] Create Arquitechture for the project 
+
+
+# Challenges
+
+
+# Resources
+- [React Crash Course](https://egghead.io/lessons/javascript-think-in-react-by-breaking-your-ui-into-components?pl=react-crash-course-58eb)
+- [MDN Our React TO Do list](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
