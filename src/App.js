@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // import css
-import './app.css';
+import "./app.css";
 
 // components
-import TodoList from './Components/TodoList/TodoList';
-import InputForm from './Components/InputForm/InputForm';
+import TodoList from "./Components/TodoList/TodoList";
+import InputForm from "./Components/InputForm/InputForm";
 
 export default function App() {
   const [todoList, setTodoList] = useState([]);
-  let [input, setInput] = useState('');
+  let [input, setInput] = useState("");
   let [id, setID] = useState(0);
 
   const addTodo = () => {
@@ -21,7 +21,7 @@ export default function App() {
       isDone: false,
     };
     setTodoList([...todoList, newTodo]);
-    setInput('');
+    setInput("");
   };
 
   return (
@@ -32,7 +32,10 @@ export default function App() {
         input={input}
         setInput={(input) => setInput(input)}
       />
-      <TodoList todoList={todoList} />
+      <TodoList
+        todoList={todoList}
+        setTodoList={(todoList) => setTodoList(todoList)}
+      />
     </div>
   );
 }

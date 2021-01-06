@@ -37,3 +37,11 @@
   background-color: #60dafb;
   color: #1f232a;
 }
+
+.to-finish {
+  text-decoration: none;
+}
+
+.finished {
+  text-decoration: line-through;
+}
