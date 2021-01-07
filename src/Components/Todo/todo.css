@@ -12,6 +12,7 @@
 
 .task:hover {
   opacity: 1;
+  box-shadow: 0 0 4px #60dafb;
 }
 
 .task-desc {
