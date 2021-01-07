@@ -1,5 +1,6 @@
 # React To Do List  
 Team Project week five w/ Jasmin, David, Stefan, Avril. 
+[Link to Github pages](https://davidsurina.github.io/react-to-do-list/)
 
 # Table of Contents
 - [Prerequisites](#Prerequisites)
