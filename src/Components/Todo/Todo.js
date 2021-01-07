@@ -22,7 +22,6 @@ export default function Todo({ todo, todoList, setTodoList }) {
         const index = todoList.indexOf(todoObject);
         todoList.splice(index, 1);
       }
-      console.log(todoList);
     });
     setTodoList([...todoList]);
   }
