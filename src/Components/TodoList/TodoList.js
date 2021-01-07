@@ -1,4 +1,4 @@
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 // Import components
 import Todo from "../Todo/Todo";
@@ -13,12 +13,6 @@ export default function TodoList({ todoList, setTodoList }) {
     todoList.splice(result.destination.index, 0, reorderedTodos);
   };
 
-  const getItemStyle = (isDragging, draggableStyle) => ({
-    userSelect: "none",
-    background: isDragging ? "rgba((31,35,42, 1)" : "1f232a",
-    ...draggableStyle,
-  });
-
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Droppable droppableId="task-droppableId">
@@ -30,30 +24,12 @@ export default function TodoList({ todoList, setTodoList }) {
           >
             {todoList.map((todo, index) => {
               return (
-                <Draggable
-                  key={todo.id}
-                  draggableId={todo.id.toString()}
+                <Todo
                   index={index}
-                >
-                  {(provided, snapshot) => (
-                    <div
-                      class="wrapper"
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      style={getItemStyle(
-                        snapshot.isDragging,
-                        provided.draggableProps.style
-                      )}
-                    >
-                      <Todo
-                        todo={todo}
-                        todoList={todoList}
-                        setTodoList={(todoList) => setTodoList(todoList)}
-                      />
-                    </div>
-                  )}
-                </Draggable>
+                  todo={todo}
+                  todoList={todoList}
+                  setTodoList={(todoList) => setTodoList(todoList)}
+                />
               );
             })}
             {provided.placeholder}
