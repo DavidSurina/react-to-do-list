@@ -7,11 +7,9 @@ export default function Todo({ todo, todoList, setTodoList, index }) {
   const markAsDone = () => {
     const todoUpdatedArray = todoList.map((todoObject) => {
       if (todoObject.id === todo.id) {
-        //todoObject.isDone = true;
         todoObject.isDone === true
           ? (todoObject.isDone = false)
           : (todoObject.isDone = true);
-        //console.log(todoObject);
         return todoObject;
       } else {
         return todoObject;
@@ -30,9 +28,20 @@ export default function Todo({ todo, todoList, setTodoList, index }) {
     setTodoList([...todoList]);
   };
 
+/*
+  const deleteTask = () => {
+    const updated = todoList.map((todoObject) => {
+      if(todoObject.id !== todo.id) {
+        return todoObject;
+      }
+    });
+    setTodoList([updated]);
+  };
+*/
+
   const getItemStyle = (isDragging, draggableStyle) => ({
     userSelect: "none",
-    background: isDragging ? "white" : "#1f232a",
+    background: isDragging ? "#333944" : "#1f232a",
     ...draggableStyle,
   });
 
