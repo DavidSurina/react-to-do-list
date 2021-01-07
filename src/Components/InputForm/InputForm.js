@@ -7,8 +7,8 @@ export default function InputForm({ input, setInput, addTodo }) {
       <input
         id="input-field"
         type="text"
-        minlength="10"
-        maxlength="45"
+        minLength="10"
+        maxLength="45"
         placeholder="What do you want to do?"
         required
         value={input}

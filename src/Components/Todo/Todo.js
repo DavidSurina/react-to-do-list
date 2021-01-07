@@ -2,13 +2,12 @@
 import "./todo.css";
 
 export default function Todo({ todo, todoList, setTodoList }) {
-
+  //Mark as done/undo function using ternary operator
   const markAsDone = () => {
     const todoUpdatedArray = todoList.map((todoObject) => {
       if (todoObject.id === todo.id) {
         //todoObject.isDone = true;
         todoObject.isDone === true ? todoObject.isDone = false : todoObject.isDone = true;
-        //console.log(todoObject);
         return todoObject;
       } else {
         return todoObject;
@@ -17,11 +16,11 @@ export default function Todo({ todo, todoList, setTodoList }) {
     setTodoList(todoUpdatedArray);
   };
 
-  
-  const deleteTask = () => {
+  const deleteTask = (event) => {
     todoList.map((todoObject) => {
-      if(todoObject.id === todo.id) {
-        todoList.splice(todoObject, 1);
+      if(todoObject.id === parseInt(event.target.parentNode.id)) {
+        const index = todoList.indexOf(todoObject);
+        todoList.splice(index, 1);
       }
       console.log(todoList);
     });
@@ -29,8 +28,9 @@ export default function Todo({ todo, todoList, setTodoList }) {
   }
 
   return (
-    <div className="task">
-      {console.log(todoList)}
+    <div 
+      id={todo.id} 
+      className="task">
       <p
         className={
           todo.isDone === true ? "task-desc finished" : "task-desc to-finish"
