@@ -1,5 +1,5 @@
 # React To Do List  
-Team Project week five w/ Jasmin, David, Stefan. 
+Team Project week five w/ Jasmin, David, Stefan, Avril. 
 
 # Table of Contents
 - [Prerequisites](#Prerequisites)
@@ -13,8 +13,8 @@ Team Project week five w/ Jasmin, David, Stefan.
 - HTML 5
 - CSS 3
 - Github
-- JSX
 - REACT
+- JSX
 
 # Objective
 Create a TO do List with React: 
