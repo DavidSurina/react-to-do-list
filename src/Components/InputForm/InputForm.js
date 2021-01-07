@@ -1,5 +1,5 @@
 // Import css files
-import './input-form.css';
+import "./input-form.css";
 
 export default function InputForm({ input, setInput, addTodo }) {
   return (
