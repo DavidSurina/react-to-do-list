@@ -13,15 +13,17 @@ export default function App() {
   let [id, setID] = useState(0);
 
   const addTodo = () => {
-    setID(++id);
+    if(input){
+      setID(++id);
 
-    const newTodo = {
-      id: id,
-      task: input,
-      isDone: false,
-    };
-    setTodoList([...todoList, newTodo]);
-    setInput("");
+      const newTodo = {
+        id: id,
+        task: input,
+        isDone: false,
+      };
+      setTodoList([...todoList, newTodo]);
+      setInput("");
+    }
   };
 
   return (
