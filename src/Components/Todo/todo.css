@@ -38,10 +38,12 @@
   color: #1f232a;
 }
 
+/*Custom classes for Todo/done tasks*/
 .to-finish {
   text-decoration: none;
 }
 
 .finished {
   text-decoration: line-through;
+  opacity: .3;
 }
