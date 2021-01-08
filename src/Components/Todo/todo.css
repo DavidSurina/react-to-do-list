@@ -21,9 +21,9 @@
   height: 3rem;
   font-size: 2.5rem;
   font-weight: 400;
-  padding-left: 1rem;
+  padding-left: 1rem; 
+  transition: all 0.45s 0.45s, background 0.15s, color .05s;
 }
-
 .task-button {
   width: 5%;
   height: 4.3rem;
@@ -42,10 +42,11 @@
 
 /*Custom classes for Todo/done tasks*/
 .to-finish {
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .finished {
   text-decoration: line-through;
-  opacity: .3;
-}
+  opacity: .2;  
+  margin-left: .2em;
+} 
