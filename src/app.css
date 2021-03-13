@@ -9,6 +9,7 @@
 
 .to-do-list {
   width: 40%;
+  min-width: 70rem;
   min-height: 60rem;
   display: flex;
   flex-direction: column;
